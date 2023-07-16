@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Student JOBsite</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <style>
+      
+       
+        .navbar
+        {
+            border-bottom: 3px solid #008ed6;
+            background: #292b2c;
+            opacity:0.7;
+        }
+        .card-form
+           {
+               opacity: 0.8;
+           }
+             body
+        {
+            background:#333;
+            color:#fff;
+        }
+        .navbar
+        {
+            border-bottom: 3px solid #008ed6;
+            background: #292b2c;
+            opacity:0.7;
+        }
+       #home-section
+       {
+           background-image: url(create.jpeg);
+           background-size: cover;
+           min-height: 700px;
+           background-attachment: fixed;
+         
+       }
+         .dark-overlay
+           {
+             background:rgba(0,0,0,.7);
+              min-height: 700px;
+               
+           }
+         
+         ////////responsive/////////
+          .colorchange
+         {
+             animation: colorchange 1s infinite;
+         }
+         @keyframes colorchange
+         {
+             0%{color:red;}
+             25%{color:#bf55ec;}
+             75%{color:#fff;}
+             100%{color:#bf55ec;}
+         }
+        
+    </style>
+    
+    
+    </head>
+    <body>
+        <nav class="navbar navbar-dark navbar-expand-md">
+           
+                <img src="logo.png" class="logo">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon">
+                        
+                    </span>
+                    
+                </button>
+                <div class="container">    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="jobwebsitereal.html" class="nav-link">Home</a>
+                    </li>
+               
+                    <li class="nav-item">
+                        <a href="taining.html" class="nav-link">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="job.php" class="nav-link">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="employers.html" class="nav-link">Cv Post</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        
+        <!--main-->
+         <section id="home-section">
+            <div class="dark-overlay">
+                <div class="home-inner">
+        <div class="container">
+        <br><br><br>
+        <h1 class="display-2 text-primary"><b>Student JObsite</b></h1>
+                                <h1 >
+                                    Student job site's vision is to make <br>the students Self Employed 
+                                </h1>
+       
+        <p class="lead"><br>Log in to your id and post your company's job advertisement in our website.<br>
+                Find your desire employee for your company.</p>
+       <p class="lead text-warning" >Join with us<br></p>
+        <div class="container">
+        <div class="row ">
+       
+             <div class="col-6">
+                 
+              <div class="card bg-dark card-form text-center">
+                <div class="card-body">
+                  <h3>Sign Up Today</h3>
+                  <p>Please fill out this form to register</p>
+                  <form action="insertuserc.php" method="post">
+                    <div class="form-group">
+                      <input type="text" placeholder="Username" name="username" required class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="password" placeholder="Password" required class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="repeat-password" placeholder="Repeat Password" required class="form-control form-control-lg">
+                    </div>  
+                    <input type="submit" class="btn btn-outline-light btn-block" value="Submit">
+                  </form>
+                </div>
+              </div></div>
+            <div class="col-6">
+               
+            <div class="card bg-light card-form text-center">
+                <br><br>
+                <div class="card-body">
+                  <h3 class="text-dark">Log in here</h3>
+                  <p class="text-dark">Please fill out this form to log in</p>
+                  <form action="loginc.php" method="post">
+                    <div class="form-group">
+                      <input type="text" placeholder="Username" name="username" class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="password" placeholder="Password" class="form-control form-control-lg">
+                    </div>
+                      
+                    <input type="submit" class="btn btn-outline-dark btn-block" value="Submit">
+                  </form>
+                </div>
+              </div>
+              
+            </div>
+        </div></div>
+    </div>
+    </div>
+            </div>
+         </div>
+    </section>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ 
+        
+    </body>
+</html>

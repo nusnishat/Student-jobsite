@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>LoopLab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <style>
+      
+        body
+        {
+            background:#333;
+            color:#fff;
+        }
+        .navbar
+        {
+            border-bottom: 3px solid #008ed6;
+            background: #292b2c;
+            opacity:0.7;
+        }
+       #home-section
+       {
+           background-image: url(desk.jpeg);
+           background-size: cover;
+           min-height: 700px;
+           background-attachment: fixed;
+         
+       }
+         .dark-overlay
+           {
+             background:rgba(0,0,0,.7);
+              min-height: 700px;
+               
+           }
+         
+           .home-inner
+           {
+               padding-top: 150px;
+               padding-bottom: 50px;
+           }
+           
+        table
+        {
+            border-collapse:collapse;
+            width:100%;
+            color:#588c7e;
+            font-family: monospace;
+            font-size: 25px;
+            text-align: left;
+        }
+        th
+        {
+            background-color: #588c7e;
+            color:white;
+        }
+        tr:nth-child(even){background-color: #f2f2f2}
+    </style>
+    
+    
+    </head>
+    <body>
+        <nav class="navbar navbar-dark navbar-expand-md">
+            
+                 <img src="logo.png" class="logo">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon">
+                        
+                    </span>
+                    
+                </button>
+               <div class="container">    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="jobwebsitereal.html" class="nav-link">Home</a>
+                    </li>
+               
+                    <li class="nav-item">
+                        <a href="taining.html" class="nav-link">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Cv Post</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        
+        <table>
+            <tr>
+            <th>Job Name</th>
+            <th>Job Post</th>
+            <th>Salary</th>
+            <th>E-mail</th>
+            <th>Description</th>
+            </tr>
+            <?php
+             $conn = mysqli_connect("localhost","root","","studentjob");
+             if($conn->connect_error)
+              {
+                die("Connection failed:" .$conn->connect_error);
+              }
+             $sql= "SELECT name,post,salary,email,description from advertisementc";
+             $result= $conn->query($sql);
+             if($result->num_rows>0) 
+             {
+               while ($row =$result->fetch_assoc())
+              {
+               echo "<tr><td>". $row["name"]."</td><td>". $row["post"].
+               "</td><td>". $row["salary"]."</td><td>". $row["email"].
+                "</td><td>". $row["description"]."</td></tr>"
+              }
+             echo "</table>";
+            }
+            else {
+             echo "0 result";
+            }
+            $conn->close();
+            ?>
+</table>
+
+
+
+
+        </table>
+       
+        
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ 
+        
+    </body>
+</html>
